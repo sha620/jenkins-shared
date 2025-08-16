@@ -1,6 +1,4 @@
 def call(String call ,String username){
-
-steps{
             withCredentials([usernamePassword(
             credentialsId:"${call}",
             usernameVariable:"user",
@@ -10,6 +8,5 @@ steps{
             sh "docker image tag ${username} ${env.user}/${username}"
             sh "docker push ${env.user}/${username}:la"
                 }
-            }
 }
 
