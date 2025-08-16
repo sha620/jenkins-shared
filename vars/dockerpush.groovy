@@ -8,7 +8,7 @@ steps{
                 )]){
             sh "docker login -u ${env.user} -p ${env.pass}"
             sh "docker image tag ${username} ${env.user}/${username}"
-            sh "docker push ${env.user}/${username}:latest"
+            sh "docker push ${env.user}/${username}:la"
                 }
             }
 }
